@@ -1,0 +1,20 @@
+{
+  "name": "2020-igti-trab-pratico-mod2",
+  "version": "1.0.0",
+  "description": "Bootcamp Desenvolvedor Full Stack IGTI 2020 - Trabalho Pratico, Modulo 02",
+  "main": "curso.js",
+  "scripts": {
+    "dev": "nodemon --ignore './public/' server.js ",
+    "start": "node server.js"
+  },
+  "author": "Thiago Canaes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "file-saver": "^2.0.2",
+    "jszip": "^3.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

@@ -1,0 +1,78 @@
+:root {
+  --flag-green: #009c3b;
+  --flag-blue: #002776;
+  --button-blue: #0043cb;
+  --flag-yellow: #ffdf00;
+  --list-yellow: #fff299;
+  --border-yellow: #ccb200;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--flag-green);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  background-color: var(--flag-blue);
+  color: #fff;
+}
+
+.main-header {
+  padding: 1.6rem 0rem;
+  text-align: center;
+}
+
+.enun {
+  margin: 1rem 1.6rem;
+  border: 2px solid var(--border-yellow);
+  background-color: var(--flag-yellow);
+  border-radius: 0.35rem;
+  overflow: hidden;
+}
+
+.enun-header {
+  font-size: 1rem;
+  padding: 0.5rem;
+  position: relative;
+}
+
+#results-01 {
+  padding: 10px;
+}
+
+#content-02 form,
+#content-02 div {
+  padding-left: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.enun-list {
+  display: block;
+  margin: 0.5rem 1rem;
+  border: 2px solid var(--border-yellow);
+  background-color: var(--list-yellow);
+  border-radius: 0.25rem;
+  list-style-type: disc;
+  display: none;
+}
+
+.enun-list li {
+  margin-left: 1.5rem;
+  font-size: 0.75rem;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "2020-igti-desafio-mod2",
+  "version": "1.0.0",
+  "description": "Desafio do Modulo 2 do curso IGTI - Desenvolvedor Fullstack",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --ignore './models/data/' server.js"
+  },
+  "author": "Thiago Canaes",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

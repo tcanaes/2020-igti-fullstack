@@ -1,0 +1,35 @@
+Extensões VSCODE
+	- es7: ES7 React/Redux/GraphQL/React-Native snippets
+	
+Instalar o YARN
+	- no
+	
+https://classic.yarnpkg.com/lang/en/
+	
+	curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+	echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+
+AULA 02
+	- Comando para criar o projeto:
+	$ npx create-react-app --scripts-version 3.4.1 teste-app
+	(npx pois o npm guarda as coisas que ele baixa)
+	
+	- Comando para iniciar o projeto
+	$ yarn start
+	
+	- Excluir os arquivos de dentro da pasta src:
+		> setupTests.js
+		> serviceWorker.js
+		> logo.svg
+		> App.test.js
+		> App.css
+	
+	- Remover a importacao dos arquivos excluidos nos arquivos:
+		/src/index.js > import * as serviceWorker from './serviceWorker';
+		/src/index.js > serviceWorker.unregister();
+		/src/App.js   > import logo from './logo.svg';
+		/src/App.js   > import './App.css';
+		
+AULA 05
+	- RCC <tab> : para criar um componente do react de maneira mais rapida		

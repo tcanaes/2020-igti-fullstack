@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <title>Notas</title>
+  </head>
+  <body>
+    <header class="main-header"></header>
+    <content class="main-content">
+      <!-- ENUNCIADO 01: CRIAR GRADE -->
+      <div id="create-grade" class="enun-container">
+        <header class="content-header">
+          <h3>01. Cadastrar nova nota</h3>
+        </header>
+        <content>
+          <form id="form--new-grade">
+            <table>
+              <tr>
+                <th class="centered">
+                  <label for="input--new-student">Nome do aluno</label>
+                </th>
+                <th class="centered">
+                  <label for="input--new-subject">Matéria</label>
+                </th>
+                <th class="centered">
+                  <label for="input--new-type">Tipo</label>
+                </th>
+                <th class="centered">
+                  <label for="input--new-value">Nota</label>
+                </th>
+                <th class="centered">Adicionar</th>
+              </tr>
+
+              <tr>
+                <td class="centered">
+                  <input
+                    class="resizeable-input"
+                    id="input--new-student"
+                    type="text"
+                    size="1"
+                  />
+                </td>
+                <td class="centered">
+                  <input
+                    class="resizeable-input"
+                    id="input--new-subject"
+                    type="text"
+                    size="1"
+                  />
+                </td>
+                <td class="centered">
+                  <input
+                    class="resizeable-input"
+                    id="input--new-type"
+                    type="text"
+                    size="1"
+                  />
+                </td>
+                <td class="centered">
+                  <input
+                    id="input--new-value"
+                    type="number"
+                    min="1"
+                    max="100"
+                    size="1"
+                  />
+                </td>
+                <td class="centered"><input type="submit" value="+" /></td>
+              </tr>
+            </table>
+          </form>
+        </content>
+      </div>
+
+      <!-- ENUNCIADO 02: EDITAR GRADE -->
+      <div id="update-grade" class="enun-container">
+        <header class="content-header">
+          <h3>02. Modificar nota</h3>
+        </header>
+        <content>
+          <form id="form--update-id">
+            <table>
+              <tr>
+                <th class="centered">
+                  <label for="input--update-id">Busca por ID</label>
+                  <input
+                    id="input--update-id"
+                    type="text"
+                    placeholder="ID"
+                    size="1"
+                  />
+                  <input type="submit" value="?" />
+                </th>
+              </tr>
+            </table>
+          </form>
+          <form id="form--update-grade">
+            <table>
+              <tr>
+                <th class="centered">
+                  <label for="input--update-student">Nome do aluno</label>
+                </th>
+                <th class="centered">
+                  <label for="input--update-subject">Matéria</label>
+                </th>
+                <th class="centered">
+                  <label for="input--update-type">Tipo</label>
+                </th>
+                <th class="centered">
+                  <label for="input--update-value">Nota</label>
+                </th>
+                <th class="centered">Atualizar</th>
+              </tr>
+
+              <tr>
+                <td class="centered">
+                  <input
+                    class="resizeable-input"
+                    id="input--update-student"
+                    type="text"
+                    size="1"
+                  />
+                </td>
+                <td class="centered">
+                  <input
+                    class="resizeable-input"
+                    id="input--update-subject"
+                    type="text"
+                    size="1"
+                  />
+                </td>
+                <td class="centered">
+                  <input
+                    class="resizeable-input"
+                    id="input--update-type"
+                    type="text"
+                    size="1"
+                  />
+                </td>
+                <td class="centered">
+                  <input
+                    id="input--update-value"
+                    type="number"
+                    min="1"
+                    max="100"
+                    size="1"
+                  />
+                </td>
+                <td class="centered"><input type="submit" value="()" /></td>
+              </tr>
+            </table>
+          </form>
+        </content>
+      </div>
+
+      <!-- ENUNCIADO 03: EXCLUIR GRADE -->
+      <div id="delete-grade" class="enun-container">
+        <header class="content-header">
+          <h3>03. Excluir nota</h3>
+        </header>
+        <content>
+          <form id="form--delete-id">
+            <table>
+              <tr>
+                <th class="centered">
+                  <label for="input--delete-id">Busca por ID</label>
+                  <input
+                    id="input--delete-id"
+                    type="text"
+                    placeholder="ID"
+                    size="1"
+                  />
+                  <input type="submit" value="?" />
+                </th>
+              </tr>
+            </table>
+          </form>
+          <form id="form--delete-grade">
+            <table>
+              <tr>
+                <th class="centered">
+                  <label for="input--delete-student">Nome do aluno</label>
+                </th>
+                <th class="centered">
+                  <label for="input--delete-subject">Matéria</label>
+                </th>
+                <th class="centered">
+                  <label for="input--delete-type">Tipo</label>
+                </th>
+                <th class="centered">
+                  <label for="input--delete-value">Nota</label>
+                </th>
+                <th class="centered">Excluir</th>
+              </tr>
+              <tr>
+                <td class="centered">
+                  <input
+                    class="resizeable-input"
+                    id="input--delete-student"
+                    type="text"
+                    size="1"
+                    readonly
+                  />
+                </td>
+                <td class="centered">
+                  <input
+                    class="resizeable-input"
+                    id="input--delete-subject"
+                    type="text"
+                    size="1"
+                    readonly
+                  />
+                </td>
+                <td class="centered">
+                  <input
+                    class="resizeable-input"
+                    id="input--delete-type"
+                    type="text"
+                    size="1"
+                    readonly
+                  />
+                </td>
+                <td class="centered">
+                  <input
+                    id="input--delete-value"
+                    type="text"
+                    min="1"
+                    max="100"
+                    size="1"
+                    readonly
+                  />
+                </td>
+                <td class="centered"><input type="submit" value="X" /></td>
+              </tr>
+            </table>
+          </form>
+        </content>
+      </div>
+
+      <!-- ENUNCIADO 04: DISPLAY GRADE -->
+      <div id="display-grade" class="enun-container">
+        <header class="content-header">
+          <h3>04. Consultar nota</h3>
+        </header>
+        <content> Já tem nos passos anteriores :) </content>
+      </div>
+
+      <!-- ENUNCIADO 05: NOTA ALUNO POR DISCIPLINA -->
+      <div id="tot-grade" class="enun-container">
+        <header class="content-header">
+          <h3>05. Total de notas do Aluno em uma Matéria</h3>
+        </header>
+        <content>
+          <form id="form--tot-grade">
+            <table>
+              <tr>
+                <th class="centered">
+                  <label for="input--tot-grade-student">Aluno</label>
+                </th>
+                <th class="centered">
+                  <label for="input--tot-grade-subject">Matéria</label>
+                </th>
+                <th class="centered">
+                  <label for="input--tot-grade-value">Nota</label>
+                </th>
+                <th class="centered">Buscar</th>
+              </tr>
+
+              <tr>
+                <td class="centered">
+                  <input
+                    id="input--tot-grade-student"
+                    class="resizeable-input"
+                  />
+                </td>
+                <td class="centered">
+                  <input
+                    id="input--tot-grade-subject"
+                    class="resizeable-input"
+                  />
+                </td>
+                <td class="centered">
+                  <input id="input--tot-grade-value" readonly size="1" />
+                </td>
+                <td class="centered"><input type="submit" value="?" /></td>
+              </tr>
+            </table>
+          </form>
+        </content>
+      </div>
+
+      <!-- ENUNCIADO 06: MÉDIA POR MATÉRIA E TIPO -->
+      <div id="average-grade" class="enun-container">
+        <header class="content-header">
+          <h3>06. Média das notas de uma determinada matéria e tipo</h3>
+        </header>
+        <content>
+          <form id="form--average-grade">
+            <table>
+              <tr>
+                <th class="centered">
+                  <label for="input--average-grade-subject">Matéria</label>
+                </th>
+                <th class="centered">
+                  <label for="input--average-grade-type">Tipo</label>
+                </th>
+                <th class="centered">
+                  <label for="input--average-grade-value">Nota</label>
+                </th>
+                <th class="centered">Buscar</th>
+              </tr>
+
+              <tr>
+                <td class="centered">
+                  <input
+                    id="input--average-grade-subject"
+                    class="resizeable-input"
+                  />
+                </td>
+                <td class="centered">
+                  <input
+                    id="input--average-grade-type"
+                    class="resizeable-input"
+                  />
+                </td>
+                <td class="centered">
+                  <input id="input--average-grade-value" readonly size="1" />
+                </td>
+                <td class="centered"><input type="submit" value="?" /></td>
+              </tr>
+            </table>
+          </form>
+        </content>
+      </div>
+
+      <!-- ENUNCIADO 07: TOP 3 NOTAS POR MATÉRIA E TIPO -->
+      <div id="top-grade" class="enun-container">
+        <header class="content-header">
+          <h3>07. Melhores 3 notas de uma determinada matéria e tipo</h3>
+        </header>
+        <content>
+          <form id="form--top-grade">
+            <table>
+              <tr>
+                <th class="centered">
+                  <label for="input--top-grade-subject">Matéria</label>
+                </th>
+                <th class="centered">
+                  <label for="input--top-grade-type">Tipo</label>
+                </th>
+                <th class="centered">Buscar</th>
+              </tr>
+              <tr>
+                <td class="centered">
+                  <input
+                    id="input--top-grade-subject"
+                    class="resizeable-input"
+                  />
+                </td>
+                <td class="centered">
+                  <input id="input--top-grade-type" class="resizeable-input" />
+                </td>
+                <td class="centered"><input type="submit" value="?" /></td>
+              </tr>
+            </table>
+            <table id="top3-grades-list"></table>
+          </form>
+        </content>
+      </div>
+
+      <!-- COMPLETE LIST -->
+      <!-- for easier user view -->
+      <div id="complete-list" class="enun-container">
+        <header class="content-header">
+          <h3>Lista completa de Notas cadastradas</h3>
+        </header>
+        <content>
+          <table id="grades-table">
+            <!--            
+            <tr>
+              <th>ID</th>
+              <th>Aluno</th>
+              <th>Matéria</th>
+              <th>Tipo</th>
+              <th>Nota</th>
+              <th>Incluso em</th>
+            </tr>
+            <tr>
+              <td>32</td>
+              <td>Erica Fonseca</td>
+              <td>Psicanálise</td>
+              <td>Trabalho Prático</td>
+              <td>99</td>
+              <td>15 de Abril de 2020, as 14:35</td>
+            </tr>
+            -->
+          </table>
+        </content>
+      </div>
+    </content>
+    <footer class="main-footer"></footer>
+  </body>
+</html>

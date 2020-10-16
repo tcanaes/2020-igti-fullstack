@@ -1,0 +1,92 @@
+:root {
+  --turquoise: #1abc9c;
+  --green-sea: #16a085;
+  --emerald: #2ecc71;
+  --nephritis: #27ae60;
+  --peter-river: #3498db;
+  --belize-hole: #2980b9;
+  --amethyst: #9b59b6;
+  --wisteria: #8e44ad;
+  --wet-asphalt: #34495e;
+  --midnight-blue: #2c3e50;
+  --sun-flower: #f1c40f;
+  --orange: #f39c12;
+  --carrot: #e67e22;
+  --pumpkin: #d35400;
+  --alizarin: #e74c3c;
+  --pomegranate: #c0392b;
+  --clouds: #ecf0f1;
+  --silver: #bdc3c7;
+  --concrete: #95a5a6;
+  --asbestos: #7f8c8d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--midnight-blue);
+  padding: 1rem;
+}
+
+/*
+content,
+header {
+  display: block;
+  padding: 0 1rem 1rem 1rem;
+  border: 1px solid var(--belize-hole);
+  background-color: var(--peter-river);
+}
+*/
+
+/*     TABELAS     */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--asbestos);
+}
+th,
+td {
+  padding: 0.15rem 0.25rem;
+  border: 1px solid var(--asbestos);
+}
+th {
+  font-size: 0.75rem;
+  background-color: var(--concrete);
+}
+td {
+  font-size: 0.6rem;
+}
+
+/* Intercalando as cores das linhas */
+tr:nth-child(even) {
+  background-color: var(--clouds);
+}
+tr:nth-child(odd) {
+  background-color: var(--silver);
+}
+
+.centered {
+  text-align: center;
+}
+
+.resizeable-input {
+  resize: horizontal;
+  width: calc(100% - 0.75rem);
+}
+
+.enun-container {
+  border: 1px solid var(--belize-hole);
+  background-color: var(--peter-river);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 2px 2px black;
+}
+
+.content-header {
+  text-align: center;
+}
