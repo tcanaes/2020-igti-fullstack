@@ -1,0 +1,33 @@
+.resultArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flagContainer {
+  width: 4rem;
+  height: 4rem;
+  flex: 0 0 1;
+}
+
+.countryFlag {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid darkgray;
+}
+
+.countryName {
+  margin-left: 1rem;
+}
+
+.countryBlock {
+  border: 1px solid gray;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  max-width: 15rem;
+  display: flex;
+  align-items: center;
+}

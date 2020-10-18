@@ -1,0 +1,28 @@
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.queryButton {
+  display: none;
+}
+
+.query {
+  padding: 0 0.5rem;
+  width: 100%;
+  min-width: 15rem;
+}
+
+.countryCount {
+  padding: 0 0.5rem;
+  border-left: 1px solid darkgray;
+  min-width: 196px;
+}
+
+.populationTotal {
+  padding: 0 0.5rem;
+  border-left: 1px solid darkgray;
+  min-width: 227px;
+}
