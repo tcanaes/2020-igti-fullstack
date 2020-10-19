@@ -7,7 +7,7 @@ export default class SalarioLiquido extends Component {
     const { value } = this.props;
     return (
       <div className="input-field">
-        <input disabled type="text" value={formatCurrency(value)}></input>
+        <input style={{color: 'green', fontWeight: 'bold'}}disabled type="text" value={formatCurrency(value)}></input>
         <label className="active">Salário líquido:</label>
       </div>
     )
