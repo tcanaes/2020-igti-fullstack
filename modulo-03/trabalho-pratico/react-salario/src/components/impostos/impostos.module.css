@@ -1,0 +1,28 @@
+.impostosContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.taxValue {
+  font-weight: bold;
+}
+
+.inss {
+  color: darkorange !important;
+}
+
+.irpf {
+  color: darkred !important;
+}
+
+.liquido {
+  color: green;
+}
+
+.taxes {
+  margin-right: 1rem;
+}
+
+.taxes:last-child {
+  margin-right: 0;
+}
