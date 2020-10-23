@@ -1,0 +1,16 @@
+.imgColumn {
+  margin: 0 1rem;
+}
+
+.imgContainer {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.imgFile {
+  width: 6rem;
+  height: 6rem;
+}
