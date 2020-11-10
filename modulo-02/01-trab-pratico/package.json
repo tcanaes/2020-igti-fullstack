@@ -4,7 +4,7 @@
   "description": "Bootcamp Desenvolvedor Full Stack IGTI 2020 - Trabalho Pratico, Modulo 02",
   "main": "curso.js",
   "scripts": {
-    "dev": "nodemon --ignore './public/' server.js ",
+    "dev": "nodemon --ignore './public/' server.js",
     "start": "node server.js"
   },
   "author": "Thiago Canaes",

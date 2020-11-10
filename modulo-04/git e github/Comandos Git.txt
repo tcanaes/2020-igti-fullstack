@@ -1,0 +1,42 @@
+01) Inicializa o GIT na pasta
+$ git init
+
+02) Verifica qual branch estamos (é para ser o MASTER logo que se inicializa)
+$ git branch
+
+03) Adiciona os arquivos para serem commitados no repositorio
+$ git add * //adiciona todos
+$ git add -A //adiciona todos os modificados
+
+04) Commita para o repositorio
+$ git commit //abre o editor de texto para que informemos um texto descritivo do commit
+$ git commit -m "mensagem descrição" //assim nao abre o editor.
+
+05) Criar um novo BRANCH sem ser o master
+$ git checkout -b "NovoBranchName" //-b já vai criar e ja vai setar o novo branch
+
+$ git branch //Para mostrar quais os brancs disponiveis, e marca o que estamos com uma *
+
+06) Volta para o branch master
+$ git checkout master
+
+07) Se tiver commits no branch NovoBranchName e quiser adicionar ao master:
+$ git merge NovoBranchName
+
+08) Após MERGE, nao faz sentido manter o NovoBranchName, entao, vamos exclui-lo
+$ git branch -d NovoBranchName
+
+09) Adicionar repositorio remoto:
+$ git remote add origin <endereço.git>
+
+10) Transportar o projeto para o repositorio remoto
+$ git push -u origin master
+
+11) Puxar do remoto para local
+$ git pull
+
+12) Puxar os branchs remotos para local
+$ git fetch origin
+$ git checkout <nome branch remoto>
+
+ 

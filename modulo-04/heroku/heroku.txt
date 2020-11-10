@@ -1,0 +1,34 @@
+1) Install Heroku CLI (PRECISA DO GIT)
+$ sudo snap install --classic heroku
+
+2) Logar no heroku
+$ heroku login
+
+3) Criar um repositorio local do Heroku na pasta do projeto
+$ heroku create
+
+4) Renomear o nome gerado automaticamente ao criar:
+$ heroku apps:rename <novo nome>
+
+5) Exibindo os repositorios remotos:
+$ git remote -v
+
+6) Criar arquivo Procfile: O heroku usa esse arquivo para saber como inicializar nossa aplicação. 
+6) Se não informar o Procfile, o heroku executa o START do package.json, porem é boas praticas criar o Procfile
+> web: node app.js
+
+7) Subir o codigo local para o repositorio remoto do heroku
+$ git push heroku master
+
+8) Exibir os logs do heroku
+$ heroku logs --tail
+
+9) Criar variaveis de ambiente na plataforma, já que o .ENV não é transferido para o git (está no .gitignore)
+! É criado pelo site, na opcao de SETTINGS do projeto
+
+10) Reiniciar o heroku para aceitar as variaveis de ambiente
+$ heroku restart
+
+11) Precia liberar no Atlas o IP do HEROKU
+
+
