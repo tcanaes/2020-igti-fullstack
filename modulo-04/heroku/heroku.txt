@@ -14,7 +14,7 @@ $ heroku apps:rename <novo nome>
 $ git remote -v
 
 6) Criar arquivo Procfile: O heroku usa esse arquivo para saber como inicializar nossa aplicação. 
-6) Se não informar o Procfile, o heroku executa o START do package.json, porem é boas praticas criar o Procfile
+6) Se não informar o Procfile, o heroku executa o START do package.json, porem é boa pratica criar o Procfile
 > web: node app.js
 
 7) Subir o codigo local para o repositorio remoto do heroku
